@@ -21,6 +21,23 @@ public class Player : MonoBehaviour
         Vector3 down = new Vector3(0, -1);
         Vector3 left = new Vector3(-1, 0);
         Vector3 right = new Vector3(1, 0);
+        
+        if (Input.GetKey("right") && Input.GetKey("up"))
+        {
+            maxVelocity = 5;
+        }
+        else if (Input.GetKey("right") && Input.GetKey("down"))
+        {
+            maxVelocity = 5;
+        }
+        else if (Input.GetKey("left") && Input.GetKey("up"))
+        {
+            maxVelocity = 5;
+        }
+        else if (Input.GetKey("left") && Input.GetKey("down"))
+        {
+            maxVelocity = 5;
+        }
 
         if (Input.GetKey("up"))
         {
