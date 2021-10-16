@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     public float maxVelocity;
     public float acceleration;
+    int state;
     private float velocity;
     private float speed;
     Vector3 zeroVector;
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        state = 0;
         speed = 0;
         zeroVector = new Vector3(0, 0, 0);
         up = new Vector3(0, 1, 0);
@@ -29,6 +31,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         transform.eulerAngles = zeroVector;
+
+        if (state == 1)
+        {
+            return;
+        }
         
         if (Input.GetKey("right") && Input.GetKey("up"))
         {
@@ -131,5 +138,15 @@ public class Player : MonoBehaviour
                 speed -= acceleration;
             }
         }
+    }
+
+    public int GetState()
+    {
+        return (state);
+    }
+
+    public void Die()
+    {
+        state = 1;
     }
 }
