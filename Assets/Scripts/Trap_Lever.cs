@@ -13,8 +13,8 @@ public class Trap_Lever : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject activated_trap;
-    public int default_activation_bar;
-    private int activation_count = 0;
+    public float default_activation_bar;
+    private float activation_count = 0;
     void Start()
     {
         
@@ -28,28 +28,34 @@ public class Trap_Lever : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.Z) && collision.gameObject.tag == "Player")
+        /*if (Input.GetKeyDown(KeyCode.Z) && collision.gameObject.tag == "Player")
         {
             activation_count += 1;
         }
-        else if(Input.GetKey(KeyCode.Z) && collision.gameObject.tag == "Player")
+        else */
+        if(Input.GetKey(KeyCode.Z) && collision.gameObject.tag == "Player")
         {
-            activation_count += 1;
+            activation_count += Time.deltaTime;
+
             if(activation_count >= default_activation_bar)
             {
                 activated_trap.SetActive(true);
             }
         }
-        else if (Input.GetKeyUp(KeyCode.Z) && collision.gameObject.tag == "Player")
+        else
         {
             activation_count = 0;
         }
+        /*else if (Input.GetKeyUp(KeyCode.Z) && collision.gameObject.tag == "Player")
+        {
+            activation_count = 0;
+        }*/
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    /*private void OnCollisionExit2D(Collision2D collision)
     {
         activation_count = 0;
-    }
+    }*/
 
 
 }

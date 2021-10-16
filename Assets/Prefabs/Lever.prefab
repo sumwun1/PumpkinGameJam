@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated_trap: {fileID: 0}
-  default_activation_bar: 100
+  default_activation_bar: 2
 --- !u!61 &4528481304184135927
 BoxCollider2D:
   m_ObjectHideFlags: 0
