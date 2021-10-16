@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxVelocity: 7
-  acceleration: 0.1
+  acceleration: 0.25
 --- !u!61 &115290733
 BoxCollider2D:
   m_ObjectHideFlags: 0
