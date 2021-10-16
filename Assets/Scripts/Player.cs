@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     public float maxVelocity;
     public float acceleration;
+    private float velocity;
     private float speed;
     Vector3 zeroVector;
     Vector3 up;
@@ -31,26 +32,34 @@ public class Player : MonoBehaviour
         
         if (Input.GetKey("right") && Input.GetKey("up"))
         {
-            maxVelocity = 5;
+            velocity = maxVelocity - 2;
         }
         else if (Input.GetKey("right") && Input.GetKey("down"))
         {
-            maxVelocity = 5;
+            velocity = maxVelocity - 2;
         }
         else if (Input.GetKey("left") && Input.GetKey("up"))
         {
-            maxVelocity = 5;
+            velocity = maxVelocity - 2;
         }
         else if (Input.GetKey("left") && Input.GetKey("down"))
         {
-            maxVelocity = 5;
+            velocity = maxVelocity - 2;
+        }
+        else
+        {
+            velocity = maxVelocity;
         }
 
         if (Input.GetKey("up"))
         {
-            if (speed < maxVelocity)
+            if (speed < velocity)
             {
                 speed += acceleration;
+            }
+            if (speed > velocity)
+            {
+                speed -= acceleration;
             }
             transform.Translate(up * speed * Time.deltaTime, Space.World);
         }
@@ -64,9 +73,13 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey("down"))
         {
-            if (speed < maxVelocity)
+            if (speed < velocity)
             {
                 speed += acceleration;
+            }
+            if (speed > velocity)
+            {
+                speed -= acceleration;
             }
             transform.Translate(down * speed * Time.deltaTime, Space.World);
         }
@@ -81,9 +94,13 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey("left"))
         {
-            if (speed < maxVelocity)
+            if (speed < velocity)
             {
                 speed += acceleration;
+            }
+            if (speed > velocity)
+            {
+                speed -= acceleration;
             }
             transform.Translate(left * speed * Time.deltaTime, Space.World);
         }
@@ -97,9 +114,13 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey("right"))
         {
-            if (speed < maxVelocity)
+            if (speed < velocity)
             {
                 speed += acceleration;
+            }
+            if (speed > velocity)
+            {
+                speed -= acceleration;
             }
             transform.Translate(right * speed * Time.deltaTime, Space.World);
         }
