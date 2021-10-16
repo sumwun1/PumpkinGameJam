@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
 
         if (state == 1)
         {
-            Debug.Log("DEAD");
+            //Debug.Log("DEAD");
             return;
         }
         
@@ -145,6 +145,7 @@ public class Player : MonoBehaviour
     public void Die()
     {
         state = 1;
+        Debug.Log("dang");
     }
 
     public int GetState()
