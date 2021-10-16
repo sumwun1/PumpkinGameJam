@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +7,8 @@ public class Trap_Activation : MonoBehaviour
     public float range;
     public GameObject activated_trap;
     Transform playerTransform;
+    public Animator animator;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,7 @@ public class Trap_Activation : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z) && (playerTransform.position - this.transform.localPosition).magnitude <= range)
         {
             Debug.Log("pressed");
+            animator.SetBool("IsPushed", true);
             activated_trap.SetActive(true);
         }
     }

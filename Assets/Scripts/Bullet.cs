@@ -7,10 +7,11 @@ public class Bullet : MonoBehaviour
     public GameObject bulletItself;
     public Vector3 dir;
     public int bulletSpeed;
+    public GameObject Turret;
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Turret = GameObject.FindGameObject("Turret")
     }
 
     // Update is called once per frame
@@ -30,6 +31,8 @@ public class Bullet : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
+            Destroy(Turret);
+            
         }
         else if(collision.tag == "Player")
         {

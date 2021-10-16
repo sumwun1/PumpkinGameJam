@@ -77,6 +77,7 @@ public class Turret : MonoBehaviour
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             var bullet = Instantiate<Bullet>(bulletPrefab, bullet_position, Quaternion.AngleAxis(angle, Vector3.forward));
             bullet.dir = dir;
+            bullet.GetComponent<Bullet>().Turret = gameObject;
             bulletSentCounter = 0;
         }
         
