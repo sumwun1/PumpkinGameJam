@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
             return;
         }
         
-        Vector3 dir = target.position - this.transform.localPosition;;
+        Vector3 dir = target.position - this.transform.localPosition;
         float distThisFrame = speed * Time.deltaTime;
 
         if (dir.magnitude <= distThisFrame)

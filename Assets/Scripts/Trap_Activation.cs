@@ -4,25 +4,32 @@ using UnityEngine;
 
 public class Trap_Activation : MonoBehaviour
 {
+    public float range;
     public GameObject activated_trap;
+    Transform playerTransform;
     // Start is called before the first frame update
     void Start()
     {
-
+        playerTransform = GameObject.FindObjectOfType<Player>().GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (Input.GetKeyDown(KeyCode.Z) && collision.gameObject.tag == "Player"){
+        if (Input.GetKeyDown(KeyCode.Z) && (playerTransform.position - this.transform.localPosition).magnitude <= range)
+        {
+            Debug.Log("pressed");
             activated_trap.SetActive(true);
         }
     }
+
+    /*private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (Input.GetKeyDown(KeyCode.Z) && collision.gameObject.tag == "Player"){
+            Debug.Log("pressed");
+            activated_trap.SetActive(true);
+        }
+    }*/
 
 
 }
