@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,6 +21,7 @@ public class Trap_1 : MonoBehaviour
         if (collision.tag == "Enemy")
         {
             Destroy(collision.gameObject);
+            this.gameObject.SetActive(false);
             // Do the animation
         }
     }
