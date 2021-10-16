@@ -17,9 +17,9 @@ public class Trap_Activation : MonoBehaviour
 
     }
 
-    private void OnCollisionStay2D(Collider2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.Z) && collision.tag == "Player"){
+        if (Input.GetKeyDown(KeyCode.Z) && collision.gameObject.tag == "Player"){
             activated_trap.SetActive(true);
         }
     }
