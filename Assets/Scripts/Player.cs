@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     public float maxVelocity;
     public float acceleration;
+    public Animator animator;
     int state;
     private float velocity;
     private float speed;
@@ -62,6 +63,8 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey("up"))
         {
+            animator.SetInteger("direction", 2);
+
             if (speed < velocity)
             {
                 speed += acceleration;
@@ -82,6 +85,8 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey("down"))
         {
+            animator.SetInteger("direction", 0);
+
             if (speed < velocity)
             {
                 speed += acceleration;

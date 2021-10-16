@@ -354,6 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxVelocity: 6.5
   acceleration: 0.2
+  animator: {fileID: 115290735}
 --- !u!61 &115290733
 BoxCollider2D:
   m_ObjectHideFlags: 0
