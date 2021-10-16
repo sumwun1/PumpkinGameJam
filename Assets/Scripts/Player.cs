@@ -149,6 +149,11 @@ public class Player : MonoBehaviour
                 speed -= acceleration;
             }
         }
+        
+        if (!Input.GetKey("left") && !Input.GetKey("up") && !Input.GetKey("down") && !Input.GetKey("right"))
+        {
+            animator.SetInteger("direction", 4);
+        }
     }
     
     public void Die()
