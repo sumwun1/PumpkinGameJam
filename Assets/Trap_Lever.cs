@@ -26,13 +26,13 @@ public class Trap_Lever : MonoBehaviour
         
     }
 
-    private void OnCollisionStay2D(Collider2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.Z) && collision.tag == "Player")
+        if (Input.GetKeyDown(KeyCode.Z) && collision.gameObject.tag == "Player")
         {
             activation_count += 1;
         }
-        else if(Input.GetKey(KeyCode.Z) && collision.tag == "Player")
+        else if(Input.GetKey(KeyCode.Z) && collision.gameObject.tag == "Player")
         {
             activation_count += 1;
             if(activation_count >= default_activation_bar)
@@ -40,7 +40,7 @@ public class Trap_Lever : MonoBehaviour
                 activated_trap.SetActive(true);
             }
         }
-        else if (Input.GetKeyUp(KeyCode.Z) && collision.tag == "Player")
+        else if (Input.GetKeyUp(KeyCode.Z) && collision.gameObject.tag == "Player")
         {
             activation_count = 0;
         }
