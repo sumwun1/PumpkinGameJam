@@ -2099,7 +2099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 361718652589977746, guid: 4bf94feb9fc15fd43826bb71f324f516, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 361718652589977748, guid: 4bf94feb9fc15fd43826bb71f324f516, type: 3}
       propertyPath: activated_trap
@@ -2147,6 +2147,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 361718652589977750, guid: 4bf94feb9fc15fd43826bb71f324f516, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 361718652589977751, guid: 4bf94feb9fc15fd43826bb71f324f516, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
