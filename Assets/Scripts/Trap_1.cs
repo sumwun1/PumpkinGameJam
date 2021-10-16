@@ -18,7 +18,7 @@ public class Trap_1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemies")
+        if (collision.tag == "Enemy")
         {
             Destroy(collision.gameObject);
             // Do the animation
