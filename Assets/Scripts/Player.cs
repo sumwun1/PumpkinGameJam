@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey("up"))
         {
-            animator.SetInteger("direction", 2);
+            animator.SetInteger("direction", 0);
 
             if (speed < velocity)
             {
@@ -85,7 +85,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey("down"))
         {
-            animator.SetInteger("direction", 0);
+            animator.SetInteger("direction", 1);
 
             if (speed < velocity)
             {
@@ -108,6 +108,8 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey("left"))
         {
+            animator.SetInteger("direction", 2);
+            
             if (speed < velocity)
             {
                 speed += acceleration;
@@ -128,6 +130,8 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey("right"))
         {
+            animator.SetInteger("direction", 3);
+            
             if (speed < velocity)
             {
                 speed += acceleration;
