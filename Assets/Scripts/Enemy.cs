@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
         transform.eulerAngles = zeroVector;
         if (target.GetComponent<Player>().GetState() == 1)
         {
+            Debug.Log("DEAD!");
             return;
         }
         // print(this.transform.rotation);

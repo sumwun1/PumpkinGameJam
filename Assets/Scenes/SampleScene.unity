@@ -594,6 +594,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c11ffbdb260bd6459c07f215e106a12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 628311230}
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &188897001
 Transform:
   m_ObjectHideFlags: 0
@@ -768,6 +770,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb8923ed75a1d4b23af661e9f7e4ec68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
+  zeroVector: {x: 0, y: 0, z: 0}
+  target: {fileID: 0}
 --- !u!1001 &778938713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -861,6 +866,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca4a9f74ba692244aee5d1b051d042d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 0}
+  dir_upLeft: {x: 0, y: 0}
+  dir_downRight: {x: 0, y: 0}
+  defaultBar: 0
 --- !u!61 &897447508
 BoxCollider2D:
   m_ObjectHideFlags: 0

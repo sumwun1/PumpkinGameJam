@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("STARTED");
         state = 0;
         speed = 0;
         zeroVector = new Vector3(0, 0, 0);
@@ -34,6 +35,7 @@ public class Player : MonoBehaviour
 
         if (state == 1)
         {
+            Debug.Log("DEAD");
             return;
         }
         
@@ -139,14 +141,15 @@ public class Player : MonoBehaviour
             }
         }
     }
+    
+    public void Die()
+    {
+        state = 1;
+    }
 
     public int GetState()
     {
         return (state);
     }
 
-    public void Die()
-    {
-        state = 1;
-    }
 }
