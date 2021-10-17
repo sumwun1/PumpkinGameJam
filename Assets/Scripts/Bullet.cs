@@ -9,11 +9,13 @@ public class Bullet : MonoBehaviour
     public int bulletSpeed;
     public GameObject Turret;
     Player player;
+    TitleScreen titleScreen;
     // Start is called before the first frame update
     void Start()
     {
         //Turret = GameObject.FindGameObject("Turret")
         player = GameObject.FindObjectOfType<Player>();
+        titleScreen = GameObject.FindObjectOfType<TitleScreen>();
     }
 
     // Update is called once per frame
@@ -37,9 +39,9 @@ public class Bullet : MonoBehaviour
         if (collision.tag == "Enemy")
         {
             Destroy(collision.gameObject);
-            Destroy(this.gameObject);
+            titleScreen.RaiseScore();
             Destroy(Turret);
-            
+            Destroy(this.gameObject);
         }
         else if(collision.tag == "Player")
         {

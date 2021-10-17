@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Trap_1 : MonoBehaviour
 {
+    TitleScreen titleScreen;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        titleScreen = GameObject.FindObjectOfType<TitleScreen>();
     }
 
     // Update is called once per frame
@@ -21,7 +23,8 @@ public class Trap_1 : MonoBehaviour
         if (collision.tag == "Enemy")
         {
             Destroy(collision.gameObject);
-            this.gameObject.SetActive(false);
+            titleScreen.RaiseScore();
+            Destroy(gameObject);
             // Do the animation
         }
     }
