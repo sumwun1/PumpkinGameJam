@@ -130,7 +130,7 @@ public class Trap_Activation : MonoBehaviour
         {
             Debug.Log("pressed");
             animator.SetBool("IsPushed", true);
-            this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
             if(initiatedTrapId == 0)
             {
                 spawnManager.Spawn(platePrefab.gameObject);
@@ -143,6 +143,8 @@ public class Trap_Activation : MonoBehaviour
             {
                 Debug.Log("trap id was " + initiatedTrapId);
             }
+
+            Destroy(gameObject);
         }
     }
 
