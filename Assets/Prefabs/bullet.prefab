@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c80fabe675da07d47aa997cb44d0953b, type: 3}
-  m_Color: {r: 0.49056602, g: 0.32997096, b: 0.085617654, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -100,7 +100,6 @@ MonoBehaviour:
   bulletItself: {fileID: 2686093997657475961}
   dir: {x: 0, y: 0, z: 0}
   bulletSpeed: 2
-  Turret: {fileID: 0}
 --- !u!61 &2686093997657475964
 BoxCollider2D:
   m_ObjectHideFlags: 0

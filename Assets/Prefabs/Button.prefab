@@ -74,6 +74,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   activated_trap: {fileID: 0}
+  turretPrefab: {fileID: 3190032161470895021, guid: a24e005e5d8eff14ca93bdc148578871, type: 3}
+  randomRange_LeftUp: {x: -4, y: -4}
+  randomRange_RightDown: {x: 4, y: 4}
+  platePrefab: {fileID: 4688296703604172088, guid: 921f8fe354fee244b96c7e82ceb237e3, type: 3}
+  mutualSetup: 0
   animator: {fileID: -275068414603125440}
 --- !u!212 &361718652589977749
 SpriteRenderer:
