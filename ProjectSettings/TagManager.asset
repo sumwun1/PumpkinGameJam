@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - Trap
   - Wall
+  - SpawnFar
   layers:
   - Default
   - TransparentFX

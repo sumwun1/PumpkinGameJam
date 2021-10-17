@@ -117,7 +117,7 @@ public class Trap_Activation : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z) && (playerTransform.position - this.transform.localPosition).magnitude <= range)
         {
-            //Debug.Log("pressed");
+            Debug.Log("pressed");
             animator.SetBool("IsPushed", true);
             activated_trap.SetActive(true);
         }
