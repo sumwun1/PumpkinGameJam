@@ -26,7 +26,7 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //if(collision)
-        //print("here!");
+        print("here!");
         if (collision.tag == "Enemy")
         {
             Destroy(collision.gameObject);

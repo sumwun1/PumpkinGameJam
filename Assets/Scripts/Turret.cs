@@ -32,7 +32,7 @@ public class Turret : MonoBehaviour
         {
             float dis = Vector3.Distance(targetArr[i].transform.localPosition, transform.localPosition);
             EnemyDic.Add(dis, targetArr[i].gameObject);
-            //Debug.Log(dis);
+            Debug.Log(dis);
             if (!EnemyList.Contains(dis))
             {
                 EnemyList.Add(dis);

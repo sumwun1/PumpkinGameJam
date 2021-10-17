@@ -13,14 +13,13 @@ GameObject:
   - component: {fileID: 4688296703604172089}
   - component: {fileID: 4688296703604172090}
   - component: {fileID: 7100520754035579607}
-  - component: {fileID: 6972241313785822745}
   m_Layer: 0
   m_Name: Pressure Plate
   m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4688296703604172091
 Transform:
   m_ObjectHideFlags: 0
@@ -143,17 +142,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6972241313785822745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4688296703604172086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a0a30835137ab549a55e19bf1d57ae6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomRange_LeftUp: {x: -2, y: -2}
-  randomRange_RightDown: {x: 2, y: 2}
