@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonPrefab: {fileID: 361718652589977748, guid: 4bf94feb9fc15fd43826bb71f324f516, type: 3}
   turretPrefab: {fileID: 2539612109385505964, guid: ba80b05c16ad80d4287e30c8009091d7, type: 3}
-  leverPrefab: {fileID: 4528481304184135924, guid: ef5f02b532547764f90d6ffd11fb7d42, type: 3}
+  leverPrefab: {fileID: 0}
   enemyPrefab: {fileID: -4688357826047190576, guid: bc55d5eb12da4924b90eb8778893d402, type: 3}
   platePrefab: {fileID: 3460375537405769963, guid: 86405b35aca9be04795b49334dc5cb08, type: 3}
   randomRange_LeftUp: {x: 5, y: 5}
