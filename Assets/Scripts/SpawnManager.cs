@@ -5,11 +5,14 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public float range;
+    public GameObject enemy;
+    public GameObject button;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        Spawn(enemy);
+        Spawn(button);
     }
 
     // Update is called once per frame

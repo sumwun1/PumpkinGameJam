@@ -14,10 +14,12 @@ public class MoreTrapEnemyInitiate : MonoBehaviour
     public Vector2 randomRange_LeftUp;
     public Vector2 randomRange_RightDown;
     GameData dataRecorder;
+    SpawnManager spawnManager;
     void Start()
     {
         player = GameObject.FindObjectOfType<Player>();
         dataRecorder = GameObject.FindObjectOfType<GameData>();
+        spawnManager = GameObject.FindObjectOfType<SpawnManager>();
         // print("GameDataEnemyNumber" + dataRecorder.additional_enemy_num);
         while (!player.basicEnemyTrapReady)
         {
@@ -42,7 +44,13 @@ public class MoreTrapEnemyInitiate : MonoBehaviour
             isIntersect = false;
             
             Vector3 midTransformPos = new Vector3(Random.Range(randomRange_LeftUp.x, randomRange_RightDown.x), Random.Range(randomRange_LeftUp.y, randomRange_RightDown.y), 0);
-            Transform midTransform = TrapArr[0].transform;
+            Transform midTransform = gameObject.transform;
+
+            if(TrapArr.Length > 0)
+            {
+                midTransform = TrapArr[0].transform;
+            }
+
             Vector3 midTransformScale = midTransform.localScale;
             // print("here!");
             // Give a random bias to the position of the trap 
@@ -104,23 +112,26 @@ public class MoreTrapEnemyInitiate : MonoBehaviour
                 int InitiatedTrapId = Random.Range(0, 4);
                 if (InitiatedTrapId == 0)
                 {
-                    var initiatedTrap = Instantiate<Trap_Activation>(buttonPrefab);
-                    initiatedTrap.transform.position = midTransformPos;
+                    /*var initiatedTrap = Instantiate<Trap_Activation>(buttonPrefab);
+                    initiatedTrap.transform.position = midTransformPos;*/
+                    spawnManager.Spawn(buttonPrefab.gameObject);
                 }
                 else if(InitiatedTrapId == 1)
                 {
-                    var initiatedTrap = Instantiate<Trap_Lever>(leverPrefab);
-                    initiatedTrap.transform.position = midTransformPos;
+                    //var initiatedTrap = Instantiate<Trap_Lever>(leverPrefab);
+                    /*var initiatedTrap = Instantiate<Trap_Activation>(buttonPrefab);
+                    initiatedTrap.transform.position = midTransformPos;*/
+                    spawnManager.Spawn(buttonPrefab.gameObject);
                 }
                 else if (InitiatedTrapId == 2)
                 {
-                    var initiatedTrap = Instantiate<Turret>(turretPrefab);
-                    initiatedTrap.transform.position = midTransformPos;
+                    /*var initiatedTrap = Instantiate<Turret>(turretPrefab);
+                    initiatedTrap.transform.position = midTransformPos;*/
                 }
                 else if (InitiatedTrapId == 3)
                 {
-                    var initiatedTrap = Instantiate<Trap_1>(platePrefab);
-                    initiatedTrap.transform.position = midTransformPos;
+                    /*var initiatedTrap = Instantiate<Trap_1>(platePrefab);
+                    initiatedTrap.transform.position = midTransformPos;*/
                 }
             }
             TrapArr = GameObject.FindGameObjectsWithTag("Trap");
@@ -133,7 +144,13 @@ public class MoreTrapEnemyInitiate : MonoBehaviour
             isIntersect = false;
             // print("here!");
             Vector3 midTransformPos = new Vector3(Random.Range(randomRange_LeftUp.x, randomRange_RightDown.x), Random.Range(randomRange_LeftUp.y, randomRange_RightDown.y), 0);
-            Transform midTransform = EnemyArr[0].transform;
+            Transform midTransform = gameObject.transform;
+
+            if(EnemyArr.Length > 0)
+            {
+                midTransform = EnemyArr[0].transform;
+            }
+
             Vector3 midTransformScale = midTransform.localScale;
             // Give a random bias to the position of the trap 
             for (int j = 0; j < WallArr.Length; j++)
@@ -191,8 +208,9 @@ public class MoreTrapEnemyInitiate : MonoBehaviour
             if (!isIntersect)
             {
                 i = i + 1;
-                var initiatedEnemy = Instantiate<Enemy>(enemyPrefab);
-                initiatedEnemy.transform.position = midTransformPos;
+                /*var initiatedEnemy = Instantiate<Enemy>(enemyPrefab);
+                initiatedEnemy.transform.position = midTransformPos;*/
+                spawnManager.Spawn(enemyPrefab.gameObject);
             }
             EnemyArr = GameObject.FindGameObjectsWithTag("Enemy");
             EnemyList = new List<float>();

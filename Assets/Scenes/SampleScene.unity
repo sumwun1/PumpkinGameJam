@@ -788,7 +788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &188897000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1650,19 +1650,19 @@ PrefabInstance:
     - target: {fileID: 6015651288321566731, guid: c97088a5abc2e02418a9cb636971e8b0, type: 3}
       propertyPath: enemyPrefab
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -4688357826047190576, guid: bc55d5eb12da4924b90eb8778893d402, type: 3}
     - target: {fileID: 6015651288321566731, guid: c97088a5abc2e02418a9cb636971e8b0, type: 3}
       propertyPath: platePrefab
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3460375537405769963, guid: 86405b35aca9be04795b49334dc5cb08, type: 3}
     - target: {fileID: 6015651288321566731, guid: c97088a5abc2e02418a9cb636971e8b0, type: 3}
       propertyPath: buttonPrefab
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 361718652589977748, guid: 4bf94feb9fc15fd43826bb71f324f516, type: 3}
     - target: {fileID: 6015651288321566731, guid: c97088a5abc2e02418a9cb636971e8b0, type: 3}
       propertyPath: turretPrefab
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2539612109385505964, guid: ba80b05c16ad80d4287e30c8009091d7, type: 3}
     - target: {fileID: 6015651288321566964, guid: c97088a5abc2e02418a9cb636971e8b0, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -2911,6 +2911,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 2
+  enemy: {fileID: 2016096899405026619, guid: bc55d5eb12da4924b90eb8778893d402, type: 3}
+  button: {fileID: 361718652589977746, guid: 4bf94feb9fc15fd43826bb71f324f516, type: 3}
 --- !u!4 &1547028732
 Transform:
   m_ObjectHideFlags: 0
