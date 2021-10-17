@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
     {
         transform.eulerAngles = zeroVector;
 
-        if (target.GetComponent<Player>().GetState() == 1)
+        if (target.GetComponent<Player>().GetState() != 0)
         {
             //Debug.Log("DEAD!");
             return;
