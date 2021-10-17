@@ -5,15 +5,18 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public Animator animator;
+    bool alive = true;
     int speed = 2;
     Vector3 zeroVector;
     Transform target;
+    TitleScreen titleScreen;
 
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindObjectOfType<Player>().GetComponent<Transform>();
         zeroVector = new Vector3(0, 0, 0);
+        titleScreen = GameObject.FindObjectOfType<TitleScreen>();
     }
 
     // Update is called once per frame
@@ -61,6 +64,17 @@ public class Enemy : MonoBehaviour
                 animator.SetInteger("direction", 1);
             }
         }
+    }
+
+    public void Die()
+    {
+        if (alive)
+        {
+            alive = false;
+            titleScreen.RaiseScore();
+        }
+
+        Destroy(gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

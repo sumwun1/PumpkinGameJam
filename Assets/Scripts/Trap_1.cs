@@ -22,8 +22,9 @@ public class Trap_1 : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            Destroy(collision.gameObject);
-            titleScreen.RaiseScore();
+            /*Destroy(collision.gameObject);
+            titleScreen.RaiseScore();*/
+            collision.GetComponent<Enemy>().Die();
             Destroy(gameObject);
             // Do the animation
         }

@@ -38,8 +38,9 @@ public class Bullet : MonoBehaviour
         //print("here!");
         if (collision.tag == "Enemy")
         {
-            Destroy(collision.gameObject);
-            titleScreen.RaiseScore();
+            /*Destroy(collision.gameObject);
+            titleScreen.RaiseScore();*/
+            collision.GetComponent<Enemy>().Die();
             Destroy(Turret);
             Destroy(this.gameObject);
         }

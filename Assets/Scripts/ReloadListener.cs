@@ -46,16 +46,23 @@ public class ReloadListener : MonoBehaviour
 
             Trap_1[] spikes = GameObject.FindObjectsOfType<Trap_1>();
 
-            for (int a = 0; a < buttons.Length; a++)
+            for (int a = 0; a < spikes.Length; a++)
             {
                 Destroy(spikes[a].gameObject);
             }
 
             Turret[] turrets = GameObject.FindObjectsOfType<Turret>();
 
-            for (int a = 0; a < buttons.Length; a++)
+            for (int a = 0; a < turrets.Length; a++)
             {
                 Destroy(turrets[a].gameObject);
+            }
+
+            Bullet[] bullets = GameObject.FindObjectsOfType<Bullet>();
+
+            for (int a = 0; a < bullets.Length; a++)
+            {
+                Destroy(bullets[a].gameObject);
             }
 
             player.gameObject.transform.position = zero;
