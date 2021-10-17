@@ -344,6 +344,7 @@ public class Player : MonoBehaviour
         state = 1;
         background.Stop();
         fail.Play();
+        animator.SetInteger("direction", 4);
         Debug.Log("dang");
         
         // Setting the random reset range.
