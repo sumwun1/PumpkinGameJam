@@ -5,6 +5,7 @@ using UnityEngine;
 public class TitleScreen : MonoBehaviour
 {
     public GameObject player;
+    public GameObject backgroundMusic;
     
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class TitleScreen : MonoBehaviour
         if(Input.GetKey("z"))
         {
             player.GetComponent<Player>().SetState(0);
+            backgroundMusic.GetComponent<AudioSource>().Play();
             this.gameObject.SetActive(false);
         }
     }

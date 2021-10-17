@@ -558,7 +558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8448959454885731079, guid: cbeb682dd08a20d4eb559076f622dc97, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbeb682dd08a20d4eb559076f622dc97, type: 3}
@@ -937,6 +937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 115290729}
+  backgroundMusic: {fileID: 1587277931}
 --- !u!1 &209709795
 GameObject:
   m_ObjectHideFlags: 0
@@ -1815,7 +1816,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press Any Button To Start!
+  m_text: Press Z To Start!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1902,6 +1903,10 @@ PrefabInstance:
     - target: {fileID: 6015651288321566730, guid: c97088a5abc2e02418a9cb636971e8b0, type: 3}
       propertyPath: m_Name
       value: MoreTrapEnemyInitiate
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015651288321566730, guid: c97088a5abc2e02418a9cb636971e8b0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6015651288321566731, guid: c97088a5abc2e02418a9cb636971e8b0, type: 3}
       propertyPath: enemyPrefab
@@ -2350,6 +2355,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 830704654566506961, guid: 2b0c2a4a8afeacf4b96e386eb197cf60, type: 3}
+      propertyPath: spawnManager
+      value: 
+      objectReference: {fileID: 1547028730}
     - target: {fileID: 830704654566506961, guid: 2b0c2a4a8afeacf4b96e386eb197cf60, type: 3}
       propertyPath: enemy_plus_num
       value: 1
@@ -3411,7 +3420,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 27bc99b3a91721347be2cc3c61447336, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.25
   m_Pitch: 1
   Loop: 1

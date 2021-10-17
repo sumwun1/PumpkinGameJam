@@ -8,15 +8,22 @@ public class Bullet : MonoBehaviour
     public Vector3 dir;
     public int bulletSpeed;
     public GameObject Turret;
+    Player player;
     // Start is called before the first frame update
     void Start()
     {
         //Turret = GameObject.FindGameObject("Turret")
+        player = GameObject.FindObjectOfType<Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(player.GetState() != 0)
+        {
+            return;
+        }
+
         float distThisFrame = bulletSpeed * Time.deltaTime;
         transform.Translate(dir.normalized * distThisFrame, Space.World);
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;

@@ -217,7 +217,7 @@ public class Player : MonoBehaviour
         
         //ifDead();
 
-        if (state == 1)
+        if (state != 0)
         {
             //Debug.Log("DEAD");
             return;
