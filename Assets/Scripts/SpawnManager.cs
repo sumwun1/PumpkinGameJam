@@ -7,6 +7,7 @@ public class SpawnManager : MonoBehaviour
     public float range;
     public GameObject enemy;
     public GameObject button;
+    private int layer = 0;
     
     // Start is called before the first frame update
     void Start()
@@ -22,8 +23,17 @@ public class SpawnManager : MonoBehaviour
     }
 
     public void Spawn(GameObject thing) {
+        if(thing.tag == "Enemy")
+        {
+            layer = -1;
+        }
+        else
+        {
+            layer = 0;
+        }
+        
         GameObject[] spawnFars = GameObject.FindGameObjectsWithTag("SpawnFar");
-        Vector3 spawnPosition = new Vector3(Random.Range(-10f, 10f), Random.Range(-8f, 8f), 0);
+        Vector3 spawnPosition = new Vector3(Random.Range(-10f, 10f), Random.Range(-8f, 8f), layer);
 
         while (true)
         {
@@ -40,7 +50,7 @@ public class SpawnManager : MonoBehaviour
 
             if (reRandomize)
             {
-                spawnPosition = new Vector3(Random.Range(-10f, 10f), Random.Range(-8f, 8f), 0);
+                spawnPosition = new Vector3(Random.Range(-10f, 10f), Random.Range(-8f, 8f), layer);
                 continue;
             }
 
