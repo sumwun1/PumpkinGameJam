@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public Animator animator;
     int speed = 2;
     Vector3 zeroVector;
     Transform target;
@@ -36,6 +37,29 @@ public class Enemy : MonoBehaviour
         else
         {
             transform.Translate(dir.normalized * distThisFrame, Space.World);
+        }
+
+        if(Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
+        {
+            if(dir.x > 0)
+            {
+                animator.SetInteger("direction", 3);
+            }
+            else
+            {
+                animator.SetInteger("direction", 2);
+            }
+        }
+        else
+        {
+            if (dir.y > 0)
+            {
+                animator.SetInteger("direction", 0);
+            }
+            else
+            {
+                animator.SetInteger("direction", 1);
+            }
         }
     }
 
