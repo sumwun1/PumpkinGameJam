@@ -11,8 +11,8 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Spawn(enemy);
-        Spawn(button);
+        /*Spawn(enemy);
+        Spawn(button);*/
     }
 
     // Update is called once per frame
@@ -48,5 +48,14 @@ public class SpawnManager : MonoBehaviour
         }
 
         Instantiate(thing, spawnPosition, this.transform.rotation).SetActive(true);
+    }
+
+    public void StartLevel(int level)
+    {
+        for(int a = 0; a < level; a++)
+        {
+            Spawn(enemy);
+            Spawn(button);
+        }
     }
 }
