@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
     {
         // Debug.Log("STARTED");
         basicEnemyTrapReady = false;
-        state = 0;
+        state = 2;
         speed = 0;
         zeroVector = new Vector3(0, 0, 0);
         Dead = false;
@@ -355,6 +355,11 @@ public class Player : MonoBehaviour
     public int GetState()
     {
         return (state);
+    }
+    
+    public void SetState(int x)
+    {
+        state = x;
     }
 
 }
