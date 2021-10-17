@@ -65,9 +65,12 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject == target.gameObject)
+        if (target)
         {
-            target.gameObject.GetComponent<Player>().Die();
+            if (collision.gameObject == target.gameObject)
+            {
+                target.gameObject.GetComponent<Player>().Die();
+            }
         }
     }
 }
