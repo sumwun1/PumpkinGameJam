@@ -13,11 +13,15 @@ public class Trap_Activation : MonoBehaviour
     public bool mutualSetup = false;
     Transform playerTransform;
     public Animator animator;
+    int initiatedTrapId;
+    SpawnManager spawnManager;
     
     // Start is called before the first frame update
     void Start()
     {
         playerTransform = GameObject.FindObjectOfType<Player>().GetComponent<Transform>();
+        spawnManager = GameObject.FindObjectOfType<SpawnManager>();
+
         if (!mutualSetup)
         {
             GameObject[] TrapArr = GameObject.FindGameObjectsWithTag("Trap");
@@ -34,6 +38,13 @@ public class Trap_Activation : MonoBehaviour
             Vector3 midTransformScale = midTransform.localScale;
             bool isIntersect = false;
             bool CorrectSetup = false;
+            initiatedTrapId = Random.Range(0, 2);
+
+            while((initiatedTrapId != 0) && (initiatedTrapId != 0))
+            {
+                initiatedTrapId = Random.Range(0, 2);
+            }
+
             while (!CorrectSetup)
             {
                 isIntersect = false;
@@ -92,19 +103,19 @@ public class Trap_Activation : MonoBehaviour
                 if (!isIntersect)
                 {
                     CorrectSetup = true;
-                    int InitiatedTrapId = Random.Range(0, 2);
-                    if (InitiatedTrapId == 0)
+                    initiatedTrapId = Random.Range(0, 2);
+                    if (initiatedTrapId == 0)
                     {
-                        var initiatedTrap = Instantiate<Turret>(turretPrefab);
+                        /*var initiatedTrap = Instantiate<Turret>(turretPrefab);
                         activated_trap = initiatedTrap.transform.gameObject;
-                        initiatedTrap.transform.position = midTransformPos;
+                        initiatedTrap.transform.position = midTransformPos;*/
                         // initiatedTrap.SetActive(false);
                     }
-                    else if (InitiatedTrapId == 1)
+                    else if (initiatedTrapId == 1)
                     {
-                        var initiatedTrap = Instantiate<Trap_1>(platePrefab);
+                        /*var initiatedTrap = Instantiate<Trap_1>(platePrefab);
                         activated_trap = initiatedTrap.transform.gameObject;
-                        initiatedTrap.transform.position = midTransformPos;
+                        initiatedTrap.transform.position = midTransformPos;*/
                         // initiatedTrap.SetActive(false);
                     }
                 }
@@ -119,7 +130,19 @@ public class Trap_Activation : MonoBehaviour
         {
             Debug.Log("pressed");
             animator.SetBool("IsPushed", true);
-            activated_trap.SetActive(true);
+            //activated_trap.SetActive(true);
+            if(initiatedTrapId == 0)
+            {
+                spawnManager.Spawn(platePrefab.gameObject);
+            }
+            else if (initiatedTrapId == 1)
+            {
+                spawnManager.Spawn(turretPrefab.gameObject);
+            }
+            else
+            {
+                Debug.Log("trap id was " + initiatedTrapId);
+            }
         }
     }
 

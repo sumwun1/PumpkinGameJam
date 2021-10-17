@@ -44,6 +44,6 @@ public class SpawnManager : MonoBehaviour
             break;
         }
 
-        Instantiate(thing, spawnPosition, this.transform.rotation);
+        Instantiate(thing, spawnPosition, this.transform.rotation).SetActive(true);
     }
 }

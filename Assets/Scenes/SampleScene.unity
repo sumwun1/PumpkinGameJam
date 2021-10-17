@@ -801,8 +801,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c11ffbdb260bd6459c07f215e106a12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 2016096899405026619, guid: bc55d5eb12da4924b90eb8778893d402, type: 3}
   startPosition: {x: 0, y: 0, z: 0}
+  enemy: {fileID: 2016096899405026619, guid: bc55d5eb12da4924b90eb8778893d402, type: 3}
+  spawnManager: {fileID: 1547028730}
 --- !u!4 &188897001
 Transform:
   m_ObjectHideFlags: 0
@@ -2672,7 +2673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44717b02dbc09344a0ccde5fa912fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 1
+  range: 2
 --- !u!4 &1547028732
 Transform:
   m_ObjectHideFlags: 0
