@@ -7,7 +7,8 @@ public class Player : MonoBehaviour
     public float maxVelocity;
     public float acceleration;
     public Animator animator;
-    public AudioSource source;
+    public AudioSource background;
+    public AudioSource fail;
     int state;
     private float velocity;
     private float speed;
@@ -160,7 +161,8 @@ public class Player : MonoBehaviour
     public void Die()
     {
         state = 1;
-        source.Stop();
+        background.Stop();
+        fail.Play();
         Debug.Log("dang");
     }
 
