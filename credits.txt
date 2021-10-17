@@ -9,3 +9,7 @@ License: http://creativecommons.org/licenses/by/4.0/
 Piano Sonata No. 14 ( https://www.yourclassical.org/story/2017/06/15/daily-download-ludwig-van-beethoven--piano-sonata-no-14-moonlight-i-adagio-sostenuto )
 
 Vampire Zone font, used in title screen and scoreboard: https://www.dafont.com/vampire-zone.font
+
+Level Design and Concept: Jacob Robinson and Alex Wang
+Assets: Jacob Robinson and Alex Wang
+Scripting: Ge Zhang, Alex Wang, and Jacob Robinson
