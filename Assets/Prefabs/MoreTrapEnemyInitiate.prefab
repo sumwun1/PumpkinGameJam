@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6015651288321566730
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6015651288321566964}
+  - component: {fileID: 6015651288321566731}
+  m_Layer: 0
+  m_Name: MoreTrapEnemyInitiate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6015651288321566964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6015651288321566730}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6015651288321566731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6015651288321566730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 061ef9ef7ba87ab43bd47310cc3644cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonPrefab: {fileID: 361718652589977748, guid: 4bf94feb9fc15fd43826bb71f324f516, type: 3}
+  turretPrefab: {fileID: 2539612109385505964, guid: ba80b05c16ad80d4287e30c8009091d7, type: 3}
+  leverPrefab: {fileID: 4528481304184135924, guid: ef5f02b532547764f90d6ffd11fb7d42, type: 3}
+  enemyPrefab: {fileID: -4688357826047190576, guid: bc55d5eb12da4924b90eb8778893d402, type: 3}
+  platePrefab: {fileID: 3460375537405769963, guid: 86405b35aca9be04795b49334dc5cb08, type: 3}
+  randomRange_LeftUp: {x: -5, y: -5}
+  randomRange_RightDown: {x: 5, y: 5}
