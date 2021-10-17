@@ -130,7 +130,7 @@ public class Trap_Activation : MonoBehaviour
         {
             Debug.Log("pressed");
             animator.SetBool("IsPushed", true);
-            //activated_trap.SetActive(true);
+            this.gameObject.SetActive(false);
             if(initiatedTrapId == 0)
             {
                 spawnManager.Spawn(platePrefab.gameObject);

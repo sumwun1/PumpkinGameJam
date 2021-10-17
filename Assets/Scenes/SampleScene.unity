@@ -556,6 +556,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameDataRecorder
       objectReference: {fileID: 0}
+    - target: {fileID: 8448959454885731079, guid: cbeb682dd08a20d4eb559076f622dc97, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbeb682dd08a20d4eb559076f622dc97, type: 3}
 --- !u!1 &158758526
@@ -2910,7 +2914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44717b02dbc09344a0ccde5fa912fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 2
+  range: 4
   enemy: {fileID: 2016096899405026619, guid: bc55d5eb12da4924b90eb8778893d402, type: 3}
   button: {fileID: 361718652589977746, guid: 4bf94feb9fc15fd43826bb71f324f516, type: 3}
 --- !u!4 &1547028732
