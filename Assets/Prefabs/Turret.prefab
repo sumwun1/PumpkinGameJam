@@ -178,8 +178,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3190032161470895020}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a0a30835137ab549a55e19bf1d57ae6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ca4a9f74ba692244aee5d1b051d042d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  randomRange_LeftUp: {x: -2, y: -2}
-  randomRange_RightDown: {x: 2, y: 2}
+  bulletPrefab: {fileID: 2686093997657475962, guid: 7ec6905beb2da734b9ae62acdf06045a, type: 3}
+  dir_upLeft: {x: 0, y: 0}
+  dir_downRight: {x: 0, y: 0}
+  defaultBar: 0
